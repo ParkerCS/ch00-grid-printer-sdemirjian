@@ -33,7 +33,17 @@ minus = '-'
 
 You can also multiply strings:
 '+' * 10 ===> '++++++++++'
+'''
+print(2 * ("+" + "-" * 8) + "+")
+for i in range (4):
+    print(2 * ("|" + " " * 8) + "|")
+print(2 * ("+" + "-" * 8) + "+")
+for i in range (4):
+    print(2 * ("|" + " " * 8) + "|")
+print(2 * ("+" + "-" * 8) + "+")
+print("\n")
 
+'''
 Part 2
 Making it more general
 
@@ -70,7 +80,16 @@ print_grid(15) prints a larger grid:
 |               |               |
 |               |               |
 + - - - - - - - + - - - - - - - +
+'''
+def grid(x):
+    for i in range(2):
+        print(2 * ("+" + "-" * int(((x-1)/2))) + "+")
+        for j in range(int((x-1)/2)):
+            print(2 * ("|" + " " * int(((x-1)/2))) + "|")
+    print(2 * ("+" + "-" * int(((x - 1) / 2))) + "+")
 
+grid(20)
+'''
 Part 3:
 Even more general...
 
@@ -121,3 +140,11 @@ Another example: print_grid2(5,3):
 |       |       |       |       |       |
 + - - - + - - - + - - - + - - - + - - - +
 '''
+def grid_2(x,y):
+    for i in range(x):
+        print(("+" + ("-" * int(y))) * x + "+")
+        for j in range(y):
+            print(("|" + (" " * int(y))) * x + "|")
+    print(("+" + ("-" * int(y))) * x + "+")
+
+grid_2(5,3)
