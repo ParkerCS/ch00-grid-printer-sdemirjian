@@ -1,3 +1,5 @@
+# spacing is different than original problem, otherwise, looks good.
+
 '''
 Grid Printer Exercise
 Printing a Grid (adapted from Downey, “Think Python”, ex. 3.5)
@@ -147,4 +149,4 @@ def grid_2(x,y):
             print(("|" + (" " * int(y))) * x + "|")
     print(("+" + ("-" * int(y))) * x + "+")
 
-grid_2(5,3)
+grid_2(5,10)
